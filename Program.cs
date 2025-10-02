@@ -20,6 +20,7 @@
                 var input = Console.ReadLine();
                 choice = input == null ? "q" : input.ToLower().Trim();
                 Console.WriteLine();
+                int num;
 
                 if (choice == "1")
                 {
@@ -33,9 +34,24 @@
                     Console.Write("Enter the maximum value");
                     int max = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine();("Enter a number between min and max");
+                    Console.WriteLine("Enter a number between min and max");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    if (num > min && num < max)
+                    {
+                        Console.WriteLine("Valid number, press ENTER to continue.");
+                        Console.ReadLine();
+                        Console.ReadKey(); 
 
-                    Console.WriteLine($"You entered Min = {min} and Max = {max}");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("nonvalid number press ENTER to continue.");
+                        Console.ReadLine();
+                    }
+
+                 
+
                 }
                 else if (choice == "2")
                 {
